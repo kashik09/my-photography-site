@@ -49,8 +49,8 @@ nav div ul li a {
 
 nav div ul li a:hover {
     color: #fafaf9;
-    text-decoration: underline .5em;
-    transition: .75s ease-in-out;
+    /* text-decoration: underline .5em; */
+    transition: .25s ease-in-out;
 }
 
 nav div ul li a.active {
