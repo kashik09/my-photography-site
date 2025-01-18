@@ -13,15 +13,16 @@ header {
 }
 
 div.nav-bar {
+    position: sticky;
     display: flex;
     width: 100%;
     align-items: center;
+    height: 6rem;
 }
 
 div.nav {
     display: flex;
     width: 75%;
-    height: 5rem;
     align-items: center;
 }
 
