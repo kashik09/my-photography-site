@@ -12,12 +12,49 @@ header {
     color: #424242;
 }
 
-ul
+div.nav-bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
 
-nav ul {
+div.nav {
+    display: flex;
+    width: 75%;
+    height: 5rem;
+    align-items: center;
+}
+
+div.img {
+    width: 25%;
+}
+
+nav div ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-around;    
+}
+
+nav div ul li a {
+    padding: 1em;
+    color: #424242;
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-decoration: none;
+    
+}
+
+nav div ul li a:hover {
+    color: #fafaf9;
+    text-decoration: underline .5em;
+    transition: .75s ease-in-out;
+}
+
+nav div ul li a.active {
+    color: #fafaf9;
 }
 
 main {
