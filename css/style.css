@@ -1,0 +1,18 @@
+
+
+/* basic section styling */
+header {
+    background-color: #009688;
+    color: #424242;
+}
+
+main {
+    background-color: #f9fafb;
+    color: #009688;
+}
+
+footer {
+    background-color: #e0e0e0;
+    color: #424242;
+    text-align: center;
+}
