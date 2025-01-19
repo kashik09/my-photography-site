@@ -167,22 +167,22 @@ footer {
     }
 
 .copyright {
-font-size: 0.875rem;
+    font-size: 0.875rem;
 }
 
 .copyright a {
-color: #009688;
-text-decoration: none;
-font-weight: bold;
+    color: #009688;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .copyright a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 .logo img {
-height: 3.125rem;
-width: auto;
+    height: 5rem;
+    width: auto;
 }
 
 /* text styling */
