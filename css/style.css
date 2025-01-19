@@ -12,7 +12,7 @@ header {
     color: #424242;
 }
 
-div.nav-bar {
+.nav-bar {
     position: sticky;
     display: flex;
     width: 100%;
@@ -20,13 +20,13 @@ div.nav-bar {
     height: 6rem;
 }
 
-div.nav {
+.nav {
     display: flex;
     width: 75%;
     align-items: center;
 }
 
-nav div ul {
+nav  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ nav div ul {
     justify-content: space-around;    
 }
 
-nav div ul li a {
+nav  ul li a {
     padding: 1em;
     color: #424242;
     font-family: "Open Sans", serif;
@@ -44,13 +44,13 @@ nav div ul li a {
     
 }
 
-nav div ul li a:hover {
+nav  ul li a:hover {
     color: #fafaf9;
     /* text-decoration: underline .5em; */
     transition: .25s ease-in-out;
 }
 
-nav div ul li a.active {
+nav  ul li a.active {
     color: #fafaf9;
 }
 
@@ -58,6 +58,8 @@ main {
     background-color: #fafaf9;
     color: #009688;
 }
+
+/* portfolio */
 
 section.portfolio {
     background: url("../images/cameras/black-and-grey-cams_large.jpg");
@@ -69,7 +71,7 @@ section.portfolio {
     padding: 1rem;
 }
 
-div.card {
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,30 +81,30 @@ div.card {
     border-radius: .75rem;
 }
 
-div.card-text {
+.card-text {
     width: 75%;
 }
 
-div.card-img {
+.card-img {
     width: 25%;
     display: flex;
     justify-content: center;
 }
 
-div.card-text {
+.card-text {
     color: #e0e0e0;
     font-size: 1.25rem;
 }
 
-div.card-text h2 {
+.card-text h2 {
     padding-bottom: .5rem;
 }
 
-div.card-paragraph {
+.card-paragraph {
     width: 100%;
 }
 
-div.card-text-container {
+.card-text-container {
     width: 65%;
     display: flex;
     justify-content: center;
@@ -112,6 +114,42 @@ img[title="Kashi Kweyu"] {
     width: 75%;
     height: auto;
     border-radius: 50%;
+}
+
+/* gallery */
+section.gallery {   
+    padding: 1rem;
+}
+
+section h2 {
+    padding-bottom: .5rem;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: auto;
+gap: 0.625rem;
+justify-items: center;
+align-items: start;
+}
+
+.grid-item {
+overflow: hidden;
+border-radius: 0.5rem;
+position: relative;
+}
+
+.grid-item img {
+width: 50%;
+height: auto;
+object-fit: cover;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+.grid-item:hover img {
+transform: scale(1.1);
 }
 
 footer {
