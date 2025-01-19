@@ -46,7 +46,6 @@ nav  ul li a {
 
 nav  ul li a:hover {
     color: #fafaf9;
-    /* text-decoration: underline .5em; */
     transition: .25s ease-in-out;
 }
 
@@ -79,10 +78,14 @@ section.portfolio {
     height: 50vh;
     background-color: #e0e0e0d0;
     border-radius: .75rem;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .card-text {
     width: 75%;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .card-img {
@@ -102,6 +105,7 @@ section.portfolio {
 
 .card-paragraph {
     width: 100%;
+    overflow-wrap: break-word;
 }
 
 .card-text-container {
@@ -132,17 +136,17 @@ section h2 {
 }
 
 .grid-item {
-overflow: hidden;
-border-radius: 0.5rem;
-position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    position: relative;
 }
 
 .grid-item img {
-width: 100%;
-height: auto;
-object-fit: cover;
-transition: transform 0.3s ease;
-cursor: pointer;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .grid-item:hover img {
@@ -153,14 +157,14 @@ footer {
     background-color: #e0e0e0;
     color: #424242;
     text-align: center;
-    padding: 1rem; /* Already in rem, no change needed */
+    padding: 1rem;
 }
 
 .footer {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
 
 .copyright {
 font-size: 0.875rem;
