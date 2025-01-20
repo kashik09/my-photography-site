@@ -130,10 +130,6 @@ section h2 {
     padding-bottom: .5rem;
 }
 
-h2 .gallery-headings {
-  font-size: 2rem;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(12.5rem, 1fr));
