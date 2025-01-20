@@ -14,7 +14,6 @@ header {
 
 /* nav bar */
 .nav-bar {
-    position: sticky;
     display: flex;
     width: 100%;
     align-items: center;
@@ -250,7 +249,6 @@ footer {
 .logo img {
     height: 4rem;
     width: auto;
-    /* border: #e0e0e0; */
 }
 
 /* text styling */
@@ -264,38 +262,37 @@ p {
 
 /* media queries */
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
     nav ul li a {
-        font-size: 1rem; /* Adjust link size */
+        font-size: 1rem;
     }
 
     .card-text {
-        font-size: 1rem; /* Shrink text in card */
+        font-size: 1rem;
     }
 
     .card-text h2 {
-        font-size: 1.25rem; /* Shrink headings */
+        font-size: 1.25rem;
     }
 
     .copyright {
-        font-size: 0.75rem; /* Shrink footer text */
+        font-size: 0.75rem;
     }
-  }
 }
+
 @media (max-width: 480px) {
     nav ul li a {
-        font-size: 0.875rem; /* Further reduce link size */
+        font-size: 0.875rem;
     }
 
     .card-text {
-        font-size: 0.875rem; /* Further shrink text in card */
+        font-size: 0.875rem;
     }
 
     .card-text h2 {
-        font-size: 1rem; /* Further shrink headings */
+        font-size: 1rem;
     }
 
     .copyright {
-        font-size: 0.625rem; /* Shrink footer text more */
+        font-size: 0.625rem;
     }
 }
