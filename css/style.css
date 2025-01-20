@@ -181,8 +181,9 @@ footer {
 }
 
 .logo img {
-    height: 5rem;
+    height: 4rem;
     width: auto;
+    /* border: #e0e0e0; */
 }
 
 /* text styling */
