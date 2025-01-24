@@ -2,7 +2,7 @@
 Welcome to my personal photography website! This platform showcases my mock portfolio while shpwing my coding skills.
 
 ## Live Site
-Check out the live version of the site here: [Kashi Kweyu Photography](https://github.com/kashik09/my-photography-site).
+Check out the live version of the site here: [Kashi Kweyu Photography](https://kashik09.github.io/my-photography-site/).
 
 ## About the Project
 This website is designed to display my photography portfolio in a clean and user-friendly manner. It includes a gallery section, contact form, and responsive design to ensure optimal viewing on various devices.
