@@ -4,6 +4,11 @@
 /* reset */
 * {
     margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* basic section styling */
@@ -41,12 +46,17 @@ nav  ul li a {
     font-weight: 600;
     font-size: 1.3rem;
     text-decoration: none;
-    
+    display: inline-block;
+    min-height: 44px;
+    min-width: 44px;
 }
 
-nav  ul li a:hover {
+nav  ul li a:hover,
+nav  ul li a:focus {
     color: #fafaf9;
     transition: .25s ease-in-out;
+    outline: 2px solid #fafaf9;
+    outline-offset: 2px;
 }
 
 nav  ul li a.active {
@@ -121,12 +131,23 @@ img[title="Kashi Kweyu"] {
 }
 
 /* gallery */
-section.gallery {   
+section.gallery {
     padding: 1rem;
 }
 
 section h2 {
     padding-bottom: .5rem;
+}
+
+/* gallery page specific */
+.gallery-headings {
+    font-size: 2.75rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+body:has(.gallery-headings) main {
+    padding: 0 2.5rem;
 }
 
 .grid {
@@ -147,6 +168,19 @@ section h2 {
 .grid-item img:hover {
   transform: scale(1.1);
   box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img:focus {
+  outline: 2px solid #009688;
+  outline-offset: 2px;
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+  .grid-item img:active {
+    transform: scale(0.95);
+    box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* Contact Section */
@@ -210,11 +244,16 @@ section.contact {
     cursor: pointer;
     align-self: center;
     font-weight: 900;
+    min-height: 44px;
+    min-width: 44px;
   }
-  
-  .contact button:hover {
+
+  .contact button:hover,
+  .contact button:focus {
     background-color: #00796b;
     transition: 0.3s ease-in-out;
+    outline: 2px solid #009688;
+    outline-offset: 2px;
   }
   
 
@@ -252,8 +291,8 @@ footer {
 }
 
 /* text styling */
-h1 h2 h3 h4 h5 h6 {
-    font-family: "Cormorant Garamond", serif
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cormorant Garamond", serif;
 }
 
 p {
@@ -261,38 +300,199 @@ p {
 }
 
 /* media queries */
+
+/* Tablet and smaller devices */
 @media (max-width: 768px) {
+    /* Navigation adjustments */
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
     nav ul li a {
         font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    /* Gallery grid - 2 columns on tablet */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .gallery-headings {
+        font-size: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    body:has(.gallery-headings) main {
+        padding: 0 1.5rem;
+    }
+
+    /* Portfolio card adjustments */
+    .card {
+        flex-direction: column;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .card-text-container {
+        width: 100%;
+        margin-bottom: 1.5rem;
     }
 
     .card-text {
+        width: 100%;
         font-size: 1rem;
+    }
+
+    .card-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-img {
+        width: 100%;
+        justify-content: center;
+    }
+
+    img[title="Kashi Kweyu"] {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    section.portfolio {
+        height: auto;
+    }
+
+    /* Contact form adjustments */
+    section.contact {
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+
+    section.contact h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+        order: 2;
+    }
+
+    .footer .logo {
+        order: 1;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    /* Navigation for mobile */
+    .nav-bar {
+        padding: 0.75rem 0;
+    }
+
+    .logo img {
+        height: 2.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    /* Gallery grid - 1 column on mobile */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .gallery-headings {
+        font-size: 1.75rem;
+        padding-top: 1rem;
+    }
+
+    body:has(.gallery-headings) main {
+        padding: 0 1rem;
+    }
+
+    /* Portfolio card for mobile */
+    .card {
+        padding: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
     }
 
     .card-text h2 {
         font-size: 1.25rem;
     }
 
-    .copyright {
-        font-size: 0.75rem;
+    .card-text-container {
+        margin-bottom: 1rem;
     }
-}
 
-@media (max-width: 480px) {
-    nav ul li a {
+    img[title="Kashi Kweyu"] {
+        width: 60%;
+        max-width: 150px;
+    }
+
+    /* Contact form for mobile */
+    section.contact {
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    section.contact h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact .form-group input,
+    .contact .form-group textarea {
+        padding: 0.625rem;
         font-size: 0.875rem;
     }
 
-    .card-text {
+    .contact button {
+        padding: 0.625rem 1.25rem;
         font-size: 0.875rem;
+        width: 100%;
     }
 
-    .card-text h2 {
-        font-size: 1rem;
+    /* Footer for mobile */
+    .footer .logo img {
+        height: 2.5rem;
     }
 
     .copyright {
         font-size: 0.625rem;
+    }
+
+    .copyright p {
+        text-align: center;
     }
 }
